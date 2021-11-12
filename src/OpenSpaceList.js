@@ -1,41 +1,25 @@
 import React from 'react';
 import OpenSpace from './OpenSpace';
+import './OpenSpaceList.css';
+import data from './sfpopos-data.json';
+
 
 function OpenSpaceList() {
+  const spaces = data.map(( { title, address, images, hours } ) => {
     return (
-      <div>
-        <OpenSpace 
-        name="50 California Street"
-        address="50 California St."
-        image="50-california-st.jpeg"/>
-        <OpenSpace
-        name="100 Pine Street"
-        address="100 Pine St."
-        image="100-pine.jpg"
-      />
       <OpenSpace
-        name="101 California Street"
-        address="101 California"
-        image="101-california.jpeg"
+        name={title}
+        address={address}
+        image={images[0]}
+        hours={hours}
       />
-      <OpenSpace
-        name="343 Sansome Roof Garden"
-        address="343 Sansome St."
-        image="343-sansome-roof-garden.jpg"
-      />
-      <OpenSpace
-        name="525 Market Street Plaza"
-        address="525 Market St."
-        image="525-market-street-plaza.jpg"
-      />
-      <OpenSpace
-        name="Citigroup Center"
-        address="1 Sansome St."
-        image="citigroup-center.png"
-      />
-
-      </div>
     )
-  }
-
+  })
+  
+  return (
+    <div className="OpenSpaceList">
+      { spaces }
+    </div>
+  )
+}
   export default OpenSpaceList
