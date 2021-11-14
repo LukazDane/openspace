@@ -6,14 +6,16 @@ import data from "../../sfpopos-data.json";
 function OpenSpaceList() {
   const spaces = data.map(({ title, address, images, hours }, i) => {
     return (
-      <OpenSpace
-        id={i}
-        key={title}
-        name={title}
-        address={address}
-        image={images[0]}
-        hours={hours}
-      />
+      <div className="OpenSpaceList">
+        <OpenSpace
+          id={i}
+          key={title}
+          name={title}
+          address={address}
+          image={images[0]}
+          hours={hours}
+        />
+      </div>
     );
   });
 
