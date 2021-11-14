@@ -1,4 +1,5 @@
 .OpenSpace {
+  position: relative;
   width: 100%;
   text-align: center;
   font-size: 0.5vw;
@@ -12,4 +13,34 @@
 Link,
 a {
   text-decoration: none;
+}
+
+.OpenSpace .OpenSpace-title {
+  text-decoration: none;
+  color: #000;
+}
+
+.OpenSpace h1 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  font-weight: lighter;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 1rem;
+  text-align: left;
+}
+
+.OpenSpace .OpenSpace-info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}
+
+.OpenSpace .OpenSpace-info div {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  background-color: rgba(255, 255, 255, 0.9);
 }

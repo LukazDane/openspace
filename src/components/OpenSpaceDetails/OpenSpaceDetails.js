@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
-import data from "../../sfpopos-data.json";
+import data from "../../sfpopos-data.js";
+import "./OpenSpaceDetails.css";
 
 function OpenSpaceDetails(props) {
   const params = useParams();
@@ -8,17 +9,17 @@ function OpenSpaceDetails(props) {
   const { images, title, desc, hours, features, geo } = data[id];
 
   return (
-    <div>
-      <div>
+    <div className="OpenSpaceDetails">
+      <div className="OpenSpaceDetails-image">
         <img src={`${process.env.PUBLIC_URL}images/${images[0]}`} alt={title} />
       </div>
 
-      <div>
-        <h1>{title}</h1>
-        <p>{desc}</p>
-        <p>{hours}</p>
-        <p>{features}</p>
-        <p>
+      <div className="OpenSpaceDetails-info">
+        <h1 className="OpenSpaceDetails-title">{title}</h1>
+        <p className="OpenSpaceDetails-desc">{desc}</p>
+        <p className="OpenSpaceDetails-hours">{hours}</p>
+        <p className="OpenSpaceDetails-features">{features}</p>
+        <p className="OpenSpaceDetails-geo">
           {geo.lat} {geo.lon}
         </p>
       </div>

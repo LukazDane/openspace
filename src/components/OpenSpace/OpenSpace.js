@@ -8,7 +8,9 @@ function OpenSpace(props) {
   return (
     <div className="OpenSpace">
       <h1>
-        <Link to={`/details/${id}`}>{name}</Link>
+        <Link className="OpenSpace-title" to={`/details/${id}`}>
+          {name}
+        </Link>
       </h1>
       <Link to={`/details/${id}`}>
         <img
@@ -18,8 +20,10 @@ function OpenSpace(props) {
           alt="Thoma's skillset is an obvious marker that the game is just going to power creep every character instead of balancing any of them ever."
         />
       </Link>
-      <div>{address}</div>
-      <div>{hours}</div>
+      <div className="OpenSpace-info">
+        <div>{address}</div>
+        <div>{hours}</div>
+      </div>
     </div>
   );
 }
