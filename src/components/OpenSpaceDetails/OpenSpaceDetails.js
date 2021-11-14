@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import data from "../../sfpopos-data.js";
 import "./OpenSpaceDetails.css";
+import OpenSpaceFeatureList from "../OpenSpaceFeatureList/OpenSpaceFeatureList.js";
 
 function OpenSpaceDetails(props) {
   const params = useParams();
@@ -18,7 +19,7 @@ function OpenSpaceDetails(props) {
         <h1 className="OpenSpaceDetails-title">{title}</h1>
         <p className="OpenSpaceDetails-desc">{desc}</p>
         <p className="OpenSpaceDetails-hours">{hours}</p>
-        <p className="OpenSpaceDetails-features">{features}</p>
+        <OpenSpaceFeatureList features={features} />
         <p className="OpenSpaceDetails-geo">
           {geo.lat} {geo.lon}
         </p>
