@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import About from './About'
-import OpenSpaceList from './OpenSpaceList'
-import OpenSpaceDetails from './OpenSpaceDetails'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./components/App";
+import reportWebVitals from "./reportWebVitals";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/About/About";
+import OpenSpaceList from "./components/OpenSpaceList/OpenSpaceList";
+import OpenSpaceDetails from "./components/OpenSpaceDetails/OpenSpaceDetails";
 
 ReactDOM.render(
   <Router>
@@ -18,7 +18,7 @@ ReactDOM.render(
       </Route>
     </Routes>
   </Router>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
