@@ -1,14 +1,27 @@
 import React from 'react'
 import './Title.css';
-import logo from './logo.svg';
+import { NavLink } from 'react-router-dom'
+// import logo from './logo.svg';
 
 
 
 function Title() {
     return (
       <div className="Title">
-        <h1>OpenSpace</h1>
-        <p className="Title-Subtitle">San Franciscos Privately Owned Public Spaces</p>
+        <header>
+        <h1>SFPOPOS</h1>
+        <div className="Title-Subtitle">San Francisco Privately Owned Public Open Spaces</div>
+
+        <div>
+        <NavLink 
+	className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
+	to="/">List</NavLink>
+<NavLink 
+	className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
+	to="/about">About</NavLink>
+        </div>
+
+      </header>
     </div>
     )
   }
