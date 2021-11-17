@@ -12,7 +12,10 @@ function OpenSpaceDetails(props) {
   return (
     <div className="OpenSpaceDetails">
       <div className="OpenSpaceDetails-image">
-        <img src={`${process.env.PUBLIC_URL}images/${images[0]}`} alt={title} />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/${images[0]}`}
+          alt={title}
+        />
       </div>
 
       <div className="OpenSpaceDetails-info">

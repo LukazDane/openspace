@@ -14,7 +14,7 @@ function OpenSpace(props) {
       </h1>
       <Link to={`/details/${id}`}>
         <img
-          src={`${process.env.PUBLIC_URL}images/${image}`}
+          src={`${process.env.PUBLIC_URL}/images/${image}`}
           width="300"
           height="300"
           alt="Thoma's skillset is an obvious marker that the game is just going to power creep every character instead of balancing any of them ever."
